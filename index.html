@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-computeratible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Арктический морской бой</title>
+    <link href="fonts/Akrobat/fonts.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="matrix" style="position: fixed; left:20px; top:50px;"></div>
+<div class="battlefield">
+    <div id="text_top" class="flex text-top">Расстановка кораблей</div>
+    <div class="flex outer">
+        <!-- playing field human -->
+        <div>
+            <div class="player-name">Ваше поле</div>
+            <div class="field field-human">
+                <div id="field_human" class="ships"></div>
+            </div>
+        </div>
+
+        <!-- /playing field human -->
+
+        <!-- playing field computer -->
+        <div hidden>
+            <span class="opponent-name">Поле соперника</span>
+            <div class="field field-computer">
+                <div id="field_computer" class="ships"></div>
+            </div>
+        </div>
+
+        <!-- /playing field computer -->
+
+        <!-- instruction -->
+        <div id="instruction" class="instruction">
+            <div id="type_placement" class="type-placement-box">
+                <span class="link" data-target="random">1.Случайным образом</span><br>
+                <span class="link" data-target="manually">2.Методом перетаскивания.</span>
+            </div>
+            <div id="ships_collection" class="ships-collection" hidden>
+                <p>Перетащите мышкой корабли на игровое поле. Для установки корабля по вертикали, кликните по нему правой кнопкой мышки.</p>
+            </div>
+        </div>
+        <!-- /instruction -->
+    </div>
+    <div class="service-row">
+        <div id="service_container" class="service-container" hidden>
+            <div id="service_text" class="service-text" hidden></div>
+            <button id="play" type="button" class="btn-play" hidden>Начать игру</button>
+            </button>
+            <button id="newgame" type="button" class="btn-play btn-newgame" hidden>Начать игру</button>
+        </div>
+
+    </div>
+</div>
+
+<ul class="initial-ships" hidden>
+    <li>
+        <div id="fourdeck1" class="ship fourdeck"></div>
+        <div id="fourdeck2" class="ship fourdeck fourdeck2"></div>
+        <div id="fourdeck3" class="ship fourdeck fourdeck3"></div>
+    </li>
+    <li>
+        <div id="tripledeck1" class="ship tripledeck"></div>
+        <div id="tripledeck2" class="ship tripledeck tripledeck2"></div>
+        <div id="tripledeck3" class="ship tripledeck tripledeck3"></div>
+        <div id="tripledeck4" class="ship tripledeck tripledeck4"></div>
+        <div id="tripledeck5" class="ship tripledeck tripledeck5"></div>
+    </li>
+    <li>
+        <div id="doubledeck1" class="ship doubledeck"></div>
+        <div id="doubledeck2" class="ship doubledeck doubledeck2"></div>
+        <div id="doubledeck3" class="ship doubledeck doubledeck3"></div>
+        <div id="doubledeck4" class="ship doubledeck doubledeck4"></div>
+        <div id="doubledeck5" class="ship doubledeck doubledeck5"></div>
+        <div id="doubledeck6" class="ship doubledeck doubledeck6"></div>
+        <div id="doubledeck7" class="ship doubledeck doubledeck7"></div>
+    </li>
+    <li>
+        <div id="singledeck1" class="ship singledeck"></div>
+        <div id="singledeck2" class="ship singledeck singledeck2"></div>
+        <div id="singledeck3" class="ship singledeck singledeck3"></div>
+        <div id="singledeck4" class="ship singledeck singledeck4"></div>
+        <div id="singledeck5" class="ship singledeck singledeck5"></div>
+        <div id="singledeck6" class="ship singledeck singledeck6"></div>
+        <div id="singledeck7" class="ship singledeck singledeck7"></div>
+        <div id="singledeck8" class="ship singledeck singledeck8"></div>
+        <div id="singledeck9" class="ship singledeck singledeck9"></div>
+    </li>
+</ul>
+
+<script src="js/function.js"></script>
+</body>
+</html>

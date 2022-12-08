@@ -1,0 +1,412 @@
+/* reset */
+html, body, div, span, h1, h2, p, a, img, strong, ul, li, button, footer, header {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a, button, div {
+    outline: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    border: none;
+}
+
+/* grid */
+html, body, .wrap {
+    height: 100%;
+}
+
+.wrap {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.ship, .icon-field, .btn-play {
+    background: url('../img/sprite.png') no-repeat;
+}
+
+/* typography */
+body {
+    font: normal 18px Akrobat;
+    color: #4530af;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/* buttons */
+.btn-play {
+    font-family: Akrobat;
+    font-size: 48px;
+    color: #4530af;
+    background-position: 0 -150px;
+}
+
+.btn-newgame {
+    font-size: 48px;
+}
+
+/* display */
+.flex {
+    display: flex;
+}
+
+/*** CONTENT ***/
+
+.battlefield {
+    width: 1440px;
+    height: 1024px;
+    left: -10px;
+    top: 1px;
+    position: relative;
+    margin: 0 auto;
+    background: url('../img/icebergs-glacier-lagoon-iceland.jpg') repeat;
+}
+
+.text-top {
+    position: absolute;
+    width: 1274px;
+    height: 119px;
+    left: 83px;
+    top: 46px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    justify-content: center;
+    color: #4535B3;
+}
+
+.service-row {
+    text-align: center;
+}
+
+.service-text {
+    font-family: Akrobat;
+    font-size: 48px;
+    line-height: 85px;
+    color: #4530af;
+    /*text-align: center;*/
+    background-position: 0 -150px;
+}
+
+.service-container {
+    justify-content: center;
+    display: none;
+    width: 824px;
+    height: 92px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(10px);
+    font-size: 48px;
+    border-radius: 27px;
+}
+
+.outer {
+    margin-bottom: 21px;
+    padding-left: 72px;
+    padding-top: 190px;
+}
+
+.field {
+    width: 609px;
+    height: 609px;
+    border-radius: 36px;
+    flex-shrink: 0;
+    backdrop-filter: blur(10px);
+    position: relative;
+    background: url('../img/bg_play_field.png') no-repeat;
+}
+
+.field-computer {
+    margin-left: 77px;
+}
+
+.ships {
+    width: 539px;
+    height: 539px;
+    position: relative;
+    left: 35px;
+    top: 35px;
+}
+
+.ship {
+    height: 35px;
+    position: absolute;
+}
+
+.vertical {
+    transform: rotate(90deg);
+    transform-origin: 17.5px 17.5px;
+}
+
+.fourdeck {
+    width: 143px;
+    background-position: 0 0;
+}
+
+.fourdeck.success {
+    background-position: 0 -50px;
+}
+
+.fourdeck.unsuccess {
+    background-position: 0 -100px;
+}
+
+.tripledeck {
+    width: 107px;
+    background-position: -150px 0;
+}
+
+.tripledeck.success {
+    background-position: -150px -50px;
+}
+
+.tripledeck.unsuccess {
+    background-position: -150px -100px;
+}
+
+.doubledeck {
+    width: 71px;
+    background-position: -270px 0;
+}
+
+.doubledeck.success {
+    background-position: -270px -50px;
+}
+
+.doubledeck.unsuccess {
+    background-position: -270px -100px;
+}
+
+.singledeck {
+    width: 35px;
+    background-position: -360px 0;
+}
+
+.singledeck.success {
+    background-position: -360px -50px;
+}
+
+.singledeck.unsuccess {
+    background-position: -360px -100px;
+}
+
+.instruction {
+    margin-left: 26px;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.type-placement-box {
+    line-height: 34px;
+    padding-bottom: 18px;
+}
+
+.type-placement-box .link {
+    border-bottom: dashed 2px #4530af;
+    cursor: pointer;
+    width: 609px;
+    height: 82px;
+    left: 72px;
+    top: 185px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 60px;
+    text-align: center;
+
+    color: #4535B3;
+}
+
+.initial-ships li {
+    height: 35px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 31px;
+}
+
+.initial-ships .ship {
+    left: 0;
+    top: 0;
+    float: left;
+    cursor: move;
+}
+
+.initial-ships .fourdeck2 {
+    left: 165px;
+}
+
+.initial-ships .fourdeck3 {
+    left: 328px;
+}
+
+.initial-ships .tripledeck1 {
+    left: 164px;
+}
+
+.initial-ships .tripledeck2 {
+    left: 127px;
+}
+
+.initial-ships .tripledeck3 {
+    left: 254px;
+}
+.initial-ships .tripledeck4 {
+    left: 381px;
+}
+.initial-ships .tripledeck5 {
+    left: 508px;
+}
+
+.initial-ships .doubledeck2 {
+    left: 91px;
+}
+
+.initial-ships .doubledeck3 {
+    left: 182px;
+}
+
+.initial-ships .doubledeck4 {
+    left: 273px;
+}
+
+.initial-ships .doubledeck5 {
+    left: 364px;
+}
+
+.initial-ships .doubledeck6 {
+    left: 455px;
+}
+
+.initial-ships .doubledeck7 {
+    left: 546px;
+}
+
+.initial-ships .singledeck2 {
+    left: 65px;
+}
+
+.initial-ships .singledeck3 {
+    left: 120px;
+}
+
+.initial-ships .singledeck4 {
+    left: 175px;
+}
+
+.initial-ships .singledeck5 {
+    left: 230px;
+}
+
+.initial-ships .singledeck6 {
+    left: 285px;
+}
+
+.initial-ships .singledeck7 {
+    left: 340px;
+}
+
+.initial-ships .singledeck8 {
+    left: 395px;
+}
+
+.initial-ships .singledeck9 {
+    left: 450px;
+}
+
+.icon-field {
+    width: 36px;
+    height: 36px;
+    display: block;
+    position: absolute;
+    z-index: 5;
+}
+
+.dot {
+    background-position: -405px 0;
+}
+
+.red-cross {
+    background-position: -405px -50px;
+}
+
+.shaded-cell {
+    background-position: -405px -100px;
+}
+
+.shaded-cell_red {
+    background-position: -410px -140px;
+}
+
+.explosion {
+    background-position: -150px -150px;
+    z-index: 6;
+    opacity: 0;
+    transform: scale(.2);
+}
+
+@keyframes Explosion {
+    0% {
+        opacity: 0;
+        transform: scale(.2);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.explosion.active {
+    animation-name: Explosion;
+    animation-duration: 0.4s;
+    transform: scale(1);
+}
+
+.player-name{
+    justify-content: center;
+    display: flex;
+    height: 82px;
+    left: 72px;
+    top: 185px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 60px;
+    text-align: center;
+    color: #4535B3;
+}
+
+.opponent-name{
+    margin-left: 77px;
+    justify-content: center;
+    display: flex;
+    height: 82px;
+    left: 72px;
+    top: 185px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 60px;
+    text-align: center;
+    color: #4535B3;
+}
+
+
